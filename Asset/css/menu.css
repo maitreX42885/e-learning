@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;    
+    font-family: 'Roboto', sans-serif;
+    src: url('../font/Roboto/Roboto-Regular.ttf');
+    scroll-behavior: smooth;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -moz-window-dragging: none;
+}
+.menu-container {
+    display: block;
+    position: relative;
+    /* border: 1px solid red; */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-snap-points-y: repeat(50vh);
+
+}
+.menu-container > img , .menu-selector > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.login-container {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F2EAE4;
+    width: 50%;
+    height: 60%;
+    border: 3px solid #3E3232;
+    border-radius: 20px;
+    animation: login .5s ease-in-out;
+    overflow: hidden;
+}
+@keyframes login {
+    from {
+        opacity: 0; 
+        transform: translate(50%, 50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    
+}
+@keyframes bar-login-t {
+    from {
+        border-bottom: 2px solid #cfc1c1;
+    }
+    to {
+        border-bottom: 2px solid var(--colorFontSec);
+    }
+    
+}
+.login-header {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    border-bottom: 2px solid var(--colorFontSec);
+    animation: bar-login-t 2s ease-in-out;
+}
+.login-header > h1 {
+    color: #A64C44;
+}
+.login-header > h2 {
+    color: var(--colorFontSec);
+}
+
+.login-body {
+    position: relative;
+    margin-top: 4rem;
+}
+.login-body > form > input {
+    padding-left: .2rem;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--colorFontSec);
+    background-color: transparent;
+    width: 75%;
+    transition: all .5s ease-in-out;
+
+}.login-body > form > input:focus {
+    
+    width: 100%;
+}
+.login-body > form > input:focus ~ label {
+    color: var(--colorFontSec);
+    font-size: 1.4rem;
+    transform: translateY(-30px);
+}
+.login-body > form > input:valid ~ label {
+    color: var(--colorFontSec);
+    font-size: 1.4rem;
+    transform: translateY(-30px);
+}
+.login-body > form > input:valid {
+    width: 100%;
+}
+
+
+.login-body > form > label {
+    font-size: 1.6rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .25s ease-in-out;
+    color: #808080;
+    
+}
+
+.login-footer {
+    margin-top: 4rem;
+}
+.login-btn {
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+.bobs:nth-child(1) {
+    width: 170px;
+    height: 170px;
+    position: absolute;
+    background-color: #A64C44;
+    top: 10px;
+    right: -40px;
+    border-radius: 100%;
+    opacity: .4;
+}
+.bobs:nth-child(2) {
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    background-color: #402F25;
+    bottom: -100px;
+    left: 50px;
+    border-radius: 100%;
+    opacity: .8;
+}
+.blob {
+    position: absolute;
+    bottom: -40px;
+    left: 500px;
+    opacity: .6;
+}
+
+
+
+
+
+.menu-selector { 
+    display: none;
+    position: relative;
+    /* border: 1px solid red; */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-snap-points-y: repeat(50vh);
+}
+
+
+.title-menu {
+    position: absolute;
+    top: 3rem;
+    left: 10rem;
+
+}
+.title-menu > h1 {
+    color: #3E3232;
+}
+.title-menu > h2 {
+    color: #A64C44;
+}
+.title-menu > h2:nth-child(3) {
+    color: #402F25;
+}
+
+.items-menu1 {
+    position: absolute;
+    border-radius: 100%;
+    top: 23%;
+    left: 20%;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+.items-menu2 {
+    position: absolute;
+    border-radius: 100%;
+    top: 50%;
+    left: 35%;
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+}
+.items-menu3 {
+    position: absolute;
+    border-radius: 100%;
+    top: 23%;
+    right: 35%;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+.items-menu4 {
+    position: absolute;
+    border-radius: 100%;
+    top: 50%;
+    right: 20%;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.circle-menu:hover {
+    transform: scale(1.15);
+    transition: all 350ms ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.exam-before {
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+}
+.exam-before:hover, .exam-after:hover {
+    cursor: pointer;
+}
+.exam-before > span {
+    font-size: 1.4rem;
+}
+.exam-before > span:nth-child(2) {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 20px;
+    border-radius: 150px;
+    background-color: #3E3232;
+    height: 7px;
+    transition: all 350ms ease-in-out;
+}
+.exam-before:hover >  span:nth-child(2) {
+    
+    width: 100%;
+}
+
+
+.exam-after {
+    position: absolute;
+    bottom: 10%;
+    right: 30%;
+}
+.exam-after > span {
+    font-size: 1.4rem;
+}
+.exam-after > span:nth-child(2) {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 20px;
+    border-radius: 150px;
+    background-color: #3E3232;
+    height: 7px;
+    transition: all 350ms ease-in-out;
+}
+.exam-after:hover >  span:nth-child(2) {
+    
+    width: 100%;
+}
+
+
+.credit {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(-30px);
+    }50% {
+        transform: translateX(30px);
+    }100% {
+        transform: translateX(0px);
+    }
+}
+
+.items-menu01 {
+    position: absolute;
+    top: 35%;
+    left: 42%;
+}
+.items-menu02 {
+    position: absolute;
+    top: 55%;
+    left: 42%;
+}
+.items-menu03 {
+    position: absolute;
+    top: 35%;
+    right: 15%;
+}
+.items-menu04 {
+    position: absolute;
+    top: 55%;
+    right: 15%;
+}
+.items-menu05 {
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+}
+.items-menu07 {
+    /* border-radius: 0%; */
+    overflow: hidden;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}
+.items-menu07 > img {
+    mix-blend-mode: multiply;
+    object-fit: cover;
+    width: 70%;
+    height: 70%;
+}
+.items-menu06 {
+    position: absolute;
+    top: 55%;
+    left: 15%;
+   
+}
+
+#menu-score {
+    color: #402F25;
+}
